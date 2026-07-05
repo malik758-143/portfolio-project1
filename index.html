@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nav Bar Using HTML5 And CSS3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(0, 0, 0);
+            padding: 15px 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgb(157, 177, 167);
+        }
+
+        .navlogo a {
+            color: rgb(0, 2, 2);
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            /* border: 2px solid rgb(0, 0, 0); */
+            padding: 2px 7px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .navicons {
+            display: flex;
+            list-style: none;
+        }
+
+        .navicons li {
+            padding: 0 28px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 500;
+            color: aliceblue;
+        }
+
+        .nav-btn {
+            background-color: rgb(255, 255, 255);
+            color: black;
+            padding: 9px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: bisque 0.3s ease-in;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background-color: bisque;
+        }
+
+        .hero {
+            width: 100%;
+            height: 90vh;
+            background-image: linear-gradient(rgb(0, 0, 0, 0.55), rgb(0, 0, 0.55)), url(car.jpg);
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .overlay {
+            width: 100%;
+            text-align: center;
+        }
+
+        .herocontent h1 {
+            font-size: 65px;
+            color: rgb(209, 209, 218);
+            font-family: fantasy;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .herocontent p {
+            color: rgb(204, 238, 227);
+            font-family: cursive;
+            width: 60%;
+            margin: auto;
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 35px;
+        }
+
+        .herobtn {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .herobtn a {
+            text-decoration: none;
+            padding: 14px 35px;
+            border-radius: 30px;
+            display: inline-block;
+            background-color: transparent;
+            font-size: 18px;
+            transition: .4s;
+            font-weight: bold;
+        }
+
+        .btn1 {
+            background-color: beige;
+            color: rgb(255, 255, 255);
+            border: 2px solid white;
+        }
+
+        .btn1:hover {
+            background-color: bisque;
+            color: rgb(0, 0, 0);
+        }
+
+        .btn2 {
+            background-color: beige;
+            border: 2px solid white;
+            color: rgb(255, 255, 255);
+            ;
+        }
+
+        .btn2:hover {
+            background-color: bisque;
+            color: rgb(0, 0, 0);
+        }
+
+        .features {
+            background-color: rgb(0, 0, 0);
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 2, 5rem;
+            color: rgb(255, 255, 255);
+            margin-bottom: 50px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .featuresgrid {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .features-card {
+            background-color: antiquewhite;
+            border: 1px solid black;
+            border-radius: 12px;
+            padding: 35px 25px;
+            width: 300px;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .features-card h3 {
+            font-size: 1.4rem;
+            color: rgb(0, 0, 0);
+            margin-bottom: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .features-card p {
+            font-size: 1rem;
+            color: rgb(0, 0, 0);
+            line-height: 1.6;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .features-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 20px rgb(0, 0, 0, 0.05);
+            border-color: rgb(161, 5, 5);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navlogo">
+            <a href="logo.png">Auto Shift</a>
+        </div>
+        <ul class="navicons">
+            <li>Home</li>
+            <li>About</li>
+            <li>Service</li>
+            <li>Contact Info</li>
+        </ul>
+        <div class="nav-btn">
+            Get Started
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="overlay">
+            <div class="herocontent">
+                <h1>Scale Your Freelance Dev Workflow 10x Faster</h1>
+                <p>An All-In-One cloud platform built for modern engineers to design, and scale web apps seamlessly</p>
+                <div class="herobtn">
+                    <a class="btn1" href="https://www.figma.com">Figma</a>
+                    <a class="btn2" href="https://www.fiver.com">Fiverr</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <h2>Why Choose Our Platform?</h2>
+        <div class="featuresgrid">
+            <div class="features-card">
+                <h3>Responsive Layouts</h3>
+                <p>We build websites that look pixel-perfect on both mobile screens and large desktop monitors</p>
+            </div>
+            <div class="features-card">
+                <h3>Clean Coding</h3>
+                <p>Our code follows modern HTML5 And CSS3 semantic standards, ensuring fast loading speeds.</p>
+            </div>
+            <div class="features-card">
+                <h3>Figma to Code</h3>
+                <p>We accurately translate your custum design prototypes into live, working web products.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
